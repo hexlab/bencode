@@ -1,5 +1,5 @@
 SEP, INT, DCT, LST, END = b':idle'
-NUM = b'0123456789'1
+NUM = b'0123456789'
 
 
 def parse_int(bstring: bytes, indx: int) -> (int, int):
