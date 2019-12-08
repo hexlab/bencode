@@ -2,7 +2,7 @@ SEP, INT, DCT, LST, END = b':idle'
 NUM = b'0123456789'
 
 
-def decode(bstring: bytes, indx: int) -> (bytes, int):
+def decode(bstring: bytes, indx: int):
     byte = bstring[indx]
     if byte == INT:
         indx, end_indx = indx + 1, bstring.index(END, indx)
