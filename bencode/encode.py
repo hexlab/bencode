@@ -22,5 +22,5 @@ def encoder(obj):
         yield b'%d:%b' % (len(obj), obj)
 
 
-def bencode(obj):
+def bencode(obj) -> bytes:
     return b''.join(encoder(obj))
