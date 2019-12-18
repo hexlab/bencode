@@ -13,7 +13,7 @@ bytes_ = bencode(res)
 
 ## How to run tests
 
-```python -m unittest discover -s tests```
+```python tests.py```
 
 ## Specs
 
@@ -54,7 +54,7 @@ dictionaries, and even lists within other lists.
 
 Represents
 
-    l3:foo3:bare represents the list of two strings: [ "foo", "bar" ]
+    l3:foo3:bare represents the list of two strings: ["foo", "bar"]
     le represents an empty list: []
 
 #### Dictionaries
@@ -73,7 +73,7 @@ comparison.
 
 Examples:
 
-    d3:foo3:bar4:dead4:beefe represents the dictionary { "foo" => "bar", "dead" => "beef" }
-    d3:fool1:a1:bee represents the dictionary { "foo" => [ "a", "b" ] }
-    d9:publisher3:bob17:publisher-webpage15:www.example.com18:publisher.location4:homee represents { "publisher" => "bob", "publisher-webpage" => "www.example.com", "publisher.location" => "home" }
+    d4:dead4:beef3:foo3:bare represents the dictionary {"dead": "beef", "foo": "bar"}
+    d3:fool1:a1:bee represents the dictionary {"foo": ["a", "b"]}
+    d9:publisher3:bob17:publisher-webpage15:www.example.com18:publisher.location4:homee represents {"publisher": "bob", "publisher-webpage": "www.example.com", "publisher.location": "home"}
     de represents an empty dictionary {}

@@ -23,7 +23,8 @@ def decode(bstring: bytes, indx: int):
         sep_indx = bstring.index(SEP, indx)
         length = int(bstring[indx:sep_indx])
         sep_indx += 1
-        return bstring[sep_indx:sep_indx + length], sep_indx + length
+        return (bstring[sep_indx:sep_indx + length].decode('utf8'),
+                sep_indx + length)
 
 
 def bdecode(bstring):
