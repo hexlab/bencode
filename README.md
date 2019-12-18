@@ -10,6 +10,11 @@ with open('1.torrent', 'rb') as binary_file:
 res = bdecode(data)
 bytes_ = bencode(res)
 ```
+
+## How to run tests
+
+```python -m unittest discover -s tests```
+
 ## Specs
 
 #### Byte strings
@@ -20,7 +25,7 @@ Encoded as follows:
 
 Examples:
 
-    e:foo represents the string "foo"
+    3:foo represents the string "foo"
     0: represents the empty string ""
 
 #### Integers
