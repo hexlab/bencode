@@ -2,6 +2,14 @@
 
 Bencode is the encoding used by the p2p file sharing system BitTorrent.
 
+## Example
+```python
+from bencode import bencode, bdecode
+with open('1.torrent', 'rb') as binary_file:
+    data = binary_file.read()
+res = bdecode(data)
+bytes_ = bencode(res)
+```
 ## Specs
 
 #### Byte strings
